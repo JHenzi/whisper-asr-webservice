@@ -10,7 +10,28 @@ Whisper is a general-purpose speech recognition model. It is trained on a large 
 
 ## Notice!
 
-This repository is a **fork** of [github.com/ahmetoner/whisper-asr-webservice](https://github.com/ahmetoner/whisper-asr-webservice) and is will face a revamp in 2023. The original repository stands as a proof of concept for automatic speech recognition. Our repository will focus on collecting and documenting **utterances** by a user, writing them to a database and providing output in formats that can be read by other applications (e.g. *markdown, docx, pdf, etc*)
+This repository is a **fork** of [github.com/ahmetoner/whisper-asr-webservice](https://github.com/ahmetoner/whisper-asr-webservice) and is will face a revamp in 2023. The original repository stands as a proof of concept for automatic speech recognition. Our repository will focus on collecting and documenting **utterances** by a user, writing them to a database and providing output in formats that can be read by other applications (e.g. *markdown, docx, pdf, etc*).
+
+### General Roadmap
+
+The project should be able to:
+
+- [ ] Accept audio files from a user
+- [ ] Transcribe the audio files and write them to a database
+- [ ] Add new transcriptions to a pipeline for topic modeling
+- [ ] Update database with topic modeling results
+
+In addition, the project needs to consider or create a user interface for browswing, searching and reading the utterances in the database. The user interface should be able to:
+
+- [ ] Search for utterances by date, time, topic, etc.
+- [ ] Give a user a list of topics to choose from
+- [ ] Given a selected topic the user should be able to see a list of related utterances (*or see related sub-topics*)
+
+### Updates Needed
+
+- [ ] Add support for MongoDB via PyMongo
+- [ ] Create docker-compose file for building Docker images from source(s)
+- [ ] Add topic modeling job to the pipeline
 
 ## Usage
 
