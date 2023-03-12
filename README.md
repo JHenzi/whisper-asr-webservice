@@ -1,3 +1,5 @@
+# Whisper ASR Webservice
+
 ![Whisper ASR Webservice](https://github.com/ahmetoner/whisper-asr-webservice/blob/main/docs/assets/img/banner.png?raw=true)
 ![Release](https://img.shields.io/github/v/release/ahmetoner/whisper-asr-webservice.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/onerahmet/openai-whisper-asr-webservice.svg)
@@ -5,6 +7,10 @@
 ![Licence](https://img.shields.io/github/license/ahmetoner/whisper-asr-webservice.svg)
 
 Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multi-task model that can perform multilingual speech recognition as well as speech translation and language identification. For more details: [github.com/openai/whisper](https://github.com/openai/whisper/)
+
+## Notice!
+
+This repository is a fork of [github.com/ahmetoner/whisper-asr-webservice](https://github.com/ahmetoner/whisper-asr-webservice) and is will face a revamp in 2023.
 
 ## Usage
 
