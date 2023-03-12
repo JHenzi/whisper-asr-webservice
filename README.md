@@ -8,7 +8,7 @@
 
 Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multi-task model that can perform multilingual speech recognition as well as speech translation and language identification. For more details: [github.com/openai/whisper](https://github.com/openai/whisper/)
 
-## Notice!
+## Notice
 
 This repository is a **fork** of [github.com/ahmetoner/whisper-asr-webservice](https://github.com/ahmetoner/whisper-asr-webservice) and is will face a revamp in 2023. The original repository stands as a proof of concept for automatic speech recognition. Our repository will focus on collecting and documenting **utterances** by a user, writing them to a database and providing output in formats that can be read by other applications (e.g. *markdown, docx, pdf, etc*).
 
@@ -32,6 +32,13 @@ In addition, the project needs to consider or create a user interface for browsw
 - [ ] Add support for MongoDB via PyMongo
 - [ ] Create docker-compose file for building Docker images from source(s)
 - [ ] Add topic modeling job to the pipeline
+
+### Potential Divergence from Original Repository
+
+- [ ] Drop support for non-English languages
+- [ ] Optimize for CPU inference
+- [ ] Optimize for VM usage/VPS hosting
+- [ ] *General removal of various extraneous endpoints*
 
 ## Usage [Pre-Fork]
 
