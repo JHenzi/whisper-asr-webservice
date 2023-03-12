@@ -10,7 +10,7 @@ Whisper is a general-purpose speech recognition model. It is trained on a large 
 
 ## Notice!
 
-This repository is a fork of [github.com/ahmetoner/whisper-asr-webservice](https://github.com/ahmetoner/whisper-asr-webservice) and is will face a revamp in 2023.
+This repository is a **fork** of [github.com/ahmetoner/whisper-asr-webservice](https://github.com/ahmetoner/whisper-asr-webservice) and is will face a revamp in 2023. The original repository stands as a proof of concept for automatic speech recognition. Our repository will focus on collecting and documenting **utterances** by a user, writing them to a database and providing output in formats that can be read by other applications (e.g. *markdown, docx, pdf, etc*)
 
 ## Usage
 
