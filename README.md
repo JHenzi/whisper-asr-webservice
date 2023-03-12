@@ -33,7 +33,7 @@ In addition, the project needs to consider or create a user interface for browsw
 - [ ] Create docker-compose file for building Docker images from source(s)
 - [ ] Add topic modeling job to the pipeline
 
-## Usage
+## Usage [Pre-Fork]
 
 Whisper ASR Webservice now available on Docker Hub. You can find the latest version of this repository on docker hub for CPU and GPU.
 
@@ -70,7 +70,7 @@ Available ASR_MODELs are `tiny`, `base`, `small`, `medium`, `large`, `large-v1` 
 
 For English-only applications, the `.en` models tend to perform better, especially for the `tiny.en` and `base.en` models. We observed that the difference becomes less significant for the `small.en` and `medium.en` models.
 
-## Run (Development Environment)
+## Run (Development Environment) [Pre-Fork]
 
 Install poetry with following command:
 
@@ -97,7 +97,7 @@ Starting the Webservice:
 poetry run gunicorn --bind 0.0.0.0:9000 --workers 1 --timeout 0 app.webservice:app -k uvicorn.workers.UvicornWorker
 ```
 
-## Quick start
+## Quick start [Pre-Fork]
 
 After running the docker image interactive Swagger API documentation is available at [localhost:9000/docs](http://localhost:9000/docs)
 
@@ -106,7 +106,7 @@ There are 2 endpoints available:
 - /asr (TXT, VTT, SRT, TSV, JSON)
 - /detect-language
 
-## Automatic Speech recognition service /asr
+## Automatic Speech recognition service /asr [Pre-Fork]
 
 If you choose the **transcribe** task, transcribes the uploaded file. Both audio and video files are supported (as long as ffmpeg supports it).
 
@@ -124,7 +124,7 @@ Returns a json with following fields:
 - **segments**: Contains an entry per segment. Each entry  provides time stamps, transcript, token ids and other metadata
 - **language**: Detected or provided language (as a language code)
 
-## Language detection service /detect-language
+## Language detection service /detect-language [Pre-Fork]
 
 Detects the language spoken in the uploaded file. For longer files it only processes first 30 seconds.
 
@@ -147,9 +147,9 @@ Configuring the Model
 export ASR_MODEL=base
 ```
 
-## Docker Build
+## Docker Build [Pre-Fork]
 
-### For CPU
+### For CPU [Pre-Fork]
 
 ```sh
 # Build Image
@@ -161,7 +161,7 @@ docker run -d -p 9000:9000 whisper-asr-webservice
 docker run -d -p 9001:9000 -e ASR_MODEL=base whisper-asr-webservice3
 ```
 
-### For GPU
+### For GPU [Pre-Fork]
 
 ```sh
 # Build Image
@@ -173,7 +173,7 @@ docker run -d --gpus all -p 9000:9000 whisper-asr-webservice-gpu
 docker run -d --gpus all -p 9000:9000 -e ASR_MODEL=base whisper-asr-webservice-gpu
 ```
 
-## Cache
+## Cache [Pre-Fork]
 The ASR model is downloaded each time you start the container, using the large model this can take some time. If you want to decrease the time it takes to start your container by skipping the download, you can store the cache directory (/root/.cache/whisper) to an persistent storage. Next time you start your container the ASR Model will be taken from the cache instead of being downloaded again.
 
 **Important this will prevent you from receiving any updates to the models.**
@@ -183,7 +183,7 @@ docker run -d -p 9000:9000 -e ASR_MODEL=large -v //c/tmp/whisper:/root/.cache/wh
 ```
 
 
-## TODO
+## TODO [Pre-Fork]
 
 - Unit tests
 - Recognize from path
